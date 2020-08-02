@@ -29,23 +29,9 @@ module.exports = (templateData) => {
 
 
         <main class="container flex-row justify-space-between align-center my-5">
-        ${generateTeam(team)}
-
-        <div class="card">
-            <img src="img_avatar.png" alt="Avatar" style="width:100%">
-            <div class="container">
-                <h4><b>John Doe</b></h4> 
-                <p>Architect & Engineer</p> 
-            </div>
-        </div>
-        
+        ${generateTeam(team)}        
         </main>
 
-        
-
-        <footer class="container text-center py-3">
-        <h3 class="text-dark">&copy;2020 Made by Os</h3>
-        </footer>
     </body>
     </html>
     `;
@@ -56,10 +42,25 @@ module.exports = (templateData) => {
 const generateTeam = (team) => {
   return team.map((member) => {
     return `
-            <div class="card">
-                <div>${member.name}</div>
-                <div>${member.id}</div>
+
+      <div class="container">
+
+        <div class="card-deck">
+          <div class="card bg-primary">
+          <div class="card-header bg-primary text-white">
+                Name: ${member.name}<br/>
+                % Manager
+                </div>
+            <div class="card-body bg-light text-left">
+                <div class="card-body">id: ${member.id}</div>
+                <div class="card-body">Email: ${member.email}</div>
+                <div class="card-body">Extra: blah</div>
             </div>
+          </div>
+      
+        </div>
+      </div>
+
         `;
   });
 };
