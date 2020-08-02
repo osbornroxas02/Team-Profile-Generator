@@ -1,0 +1,36 @@
+:root {
+    --primary: #e84755;
+  --secondary: #daeaef;
+}
+
+* {
+    box-sizing: border-box;
+  }
+
+body {
+  background-color: var(--secondary);
+  margin: 0;
+  padding: 0;
+  font-family: "Public Sans", sans-serif;
+  font-weight: 300;
+  color: var(--dark);
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+header {
+    background-color: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 10px;
+   
+  }
+
+  .flex-row {
+    display: flex;
+    justify-content: center;
+  }
+
+  footer {
+    background-color: var(--primary);
+  }
