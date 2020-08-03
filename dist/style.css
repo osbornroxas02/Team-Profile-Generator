@@ -1,6 +1,8 @@
 :root {
-    --primary: #e84755;
-  --secondary: #daeaef;
+  --main-header-color: #add8e6;/*light blue = var(--main-header-color */
+  --main-bg-color: #f5f5f5;/*whitesmoke var(--main-bg-color) */
+  --main-txt-color: #ffffff;/*white = var(--main-txt-color) */
+  --main-padding: 10px;
 }
 
 * {
@@ -8,58 +10,31 @@
   }
 
 body {
-  /* margin: 0;
-  padding: 0; */
+  margin: 0;
+  padding: 0;
   font-family: "Public Sans", sans-serif;
   font-weight: 300;
-  color: var(--dark);
   line-height: 1.5;
   font-size: 16px;
 }
 
 header {
-    background-color: var(--primary);
-    color: white;
-    text-align: center;
-    padding: 10px;
-   
-  }
+  text-align: center;
+  padding: 10px;
+}
 
-  .flex-row {
-    display: flex;
-    justify-content: center;
-  }
+.card-header {
+  padding: .75rem 1.25rem;
+  margin-bottom: 0;
+  color: var(--main-txt-color);
+  border-bottom: 1px solid rgba(0,0,0,.125);
+}
 
-  
-  Float four columns side by side
-  .column {
-    float: left;
-    width: 25%;
-    padding: 0 10px;
-  }
-  
-  /* Remove extra left and right margins, due to padding */
-  .row {margin: 0 -5px;}
-  
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
-  /* Responsive columns */
-  @media screen and (max-width: 600px) {
-    .column {
-      width: 100%;
-      display: block;
-      margin-bottom: 20px;
-    }
-  }
-  
-  /* Style the counter cards */
-  .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    padding: 16px;
-    margin: 10px;
-  }
+.card-body{
+  background-color: whitesmoke;
+}
+
+.main-color {
+  background-color: var(--main-header-color);
+  color: var(--main-txt-color);
+}
