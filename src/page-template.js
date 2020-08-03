@@ -22,17 +22,14 @@ module.exports = (templateData) => {
     <link rel="stylesheet" href="./style.css">
 
     <title>Portfolio Demo</title>
-
   </head>
 
   <body>
   <header>
-
     <div class="container main-color flex-row justify-space-between align-center py-3">
       <h1 class="page-title py-2 px-3">My Team</h1>
       <nav class="flex-row"></nav>
     </div>
-
   </header>
 
   <main class="container flex-row justify-space-between align-center my-5">
@@ -59,20 +56,18 @@ generateSite.writeFile(fileContent);
 const generateTeam = (team) => {
 return team.map((member) => {
   return `
-
     <div class="col-sm-12 col-md-4">
       <div class="card mb-3" style="max-width: 18rem;">
-        <div class="card-header main-color">${member.name}<br />Manager</div>
+        <div class="card-header main-color">${member.name}<br />${member.role}</div>
         <div class="card-body">
           <ul class="list-group list-group-flush">
-            <li class="list-group-item">Id: ${member.id}</li>
+            <li class="list-group-item">ID: ${member.id}</li>
             <li class="list-group-item">Email: ${member.email}</li>
             <li class="list-group-item">Extra: blah</li>
           </ul>
         </div>
       </div>
     </div>
-
   `;
   });
 };

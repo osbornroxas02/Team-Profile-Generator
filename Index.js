@@ -7,7 +7,7 @@ const generateHTML = require('./src/page-template');
 
 class Prompt {
     team = []
-
+    
     start = () => {
         this.getRole();
     }
@@ -17,7 +17,7 @@ class Prompt {
         .prompt({
             type: 'list',
             name: 'role',
-            choices: ['Employee', 'Manager', 'Intern', 'Engineer']
+            choices: ['Manager', 'Intern', 'Engineer']
         }) 
         .then(({ role }) => {
             this.role = role
@@ -77,7 +77,7 @@ class Prompt {
             else {
                 console.log('create employee');
 
-                this.team.push(new Employee(this.name, this.id, this.email))
+                this.team.push(new Employee(this.name, this.role, this.role, this.id, this.email))
                 this.promptNewMember();
             }
         })
@@ -95,7 +95,7 @@ class Prompt {
             console.log(officeNumber);
             console.log('create manager');
 
-            this.team.push(new Manager(this.name, this.id, this.email, this.officeNumber))
+            this.team.push(new Manager(this.name, this.role, this.id, this.email, this.officeNumber))
             this.promptNewMember();
         })
     };
@@ -112,7 +112,7 @@ class Prompt {
             console.log(school);
             console.log('create intern');
 
-            this.team.push(new Intern(this.name, this.id, this.email, this.school))
+            this.team.push(new Intern(this.name, this.role, this.id, this.email, this.school))
             this.promptNewMember();
         })
     };
@@ -129,7 +129,7 @@ class Prompt {
             console.log(gitHub);
             console.log('create engineer');
 
-            this.team.push(new Engineer(this.name, this.id, this.email, this.gitHub) )
+            this.team.push(new Engineer(this.name, this.role, this.id, this.email, this.gitHub) )
             this.promptNewMember();
         })
     };
