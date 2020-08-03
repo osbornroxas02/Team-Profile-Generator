@@ -63,11 +63,11 @@ return team.map((member) => {
           <ul class="list-group list-group-flush">
             <li class="list-group-item">ID: ${member.id}</li>
             <li class="list-group-item">Email: ${member.email}</li>
-            <li class="list-group-item">Extra: blah</li>
+            <li class="list-group-item">blah</li>
           </ul>
         </div>
       </div>
     </div>
   `;
-  });
+  }).join(' ');
 };

@@ -21,6 +21,10 @@ body {
 header {
   text-align: center;
   padding: 10px;
+  background-color: var(--main-header-color);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+
+  display: block;
 }
 
 .card-header {
@@ -32,6 +36,10 @@ header {
 
 .card-body{
   background-color: whitesmoke;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
 }
 
 .main-color {
