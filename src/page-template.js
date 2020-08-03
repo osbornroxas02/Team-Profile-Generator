@@ -55,19 +55,72 @@ generateSite.writeFile(fileContent);
 
 const generateTeam = (team) => {
 return team.map((member) => {
+
+  if(member.role === "Manager") {
   return `
     <div class="col-sm-12 col-md-4">
       <div class="card mb-3" style="max-width: 18rem;">
-        <div class="card-header main-color">${member.name}<br />${member.role}</div>
+        <div class="card-header main-color">${member.name}<br />
+        <img src="https://img.icons8.com/cotton/16/000000/hot-coffee--v1.png"/> ${member.role}</div>
         <div class="card-body">
           <ul class="list-group list-group-flush">
             <li class="list-group-item">ID: ${member.id}</li>
             <li class="list-group-item">Email: ${member.email}</li>
-            <li class="list-group-item">blah</li>
+            <li class="list-group-item">Office Number: ${member.officeNumber}</li>
           </ul>
         </div>
       </div>
     </div>
   `;
+  } 
+  else if(member.role === "Engineer") {
+    return `
+      <div class="col-sm-12 col-md-4">
+        <div class="card mb-3" style="max-width: 18rem;">
+          <div class="card-header main-color">${member.name}<br />
+          <img src="https://img.icons8.com/officel/16/000000/glasses.png"/> ${member.role}</div>
+          <div class="card-body">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">ID: ${member.id}</li>
+              <li class="list-group-item">Email: ${member.email}</li>
+              <li class="list-group-item">Github: ${member.github}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+  else { 
+      return `
+        <div class="col-sm-12 col-md-4">
+          <div class="card mb-3" style="max-width: 18rem;">
+            <div class="card-header main-color">${member.name}<br />
+            <img src="https://img.icons8.com/officel/16/000000/graduation-cap.png"/> ${member.role}</div>
+            <div class="card-body">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">ID: ${member.id}</li>
+                <li class="list-group-item">Email: ${member.email}</li> 
+                <li class="list-group-item">School: ${member.school}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+  // return `
+  //   <div class="col-sm-12 col-md-4">
+  //     <div class="card mb-3" style="max-width: 18rem;">
+  //       <div class="card-header main-color">${member.name}<br />${member.role}</div>
+  //       <div class="card-body">
+  //         <ul class="list-group list-group-flush">
+  //           <li class="list-group-item">ID: ${member.id}</li>
+  //           <li class="list-group-item">Email: ${member.email}</li>
+  //           <li class="list-group-item">blah</li>
+  //         </ul>
+  //       </div>
+  //     </div>
+  //   </div>
+  // `;
   }).join(' ');
 };

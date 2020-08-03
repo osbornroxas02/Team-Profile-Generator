@@ -140,7 +140,7 @@ class Prompt {
         .prompt({
             type: 'confirm',
             name: 'newMember',
-            message: 'Do you want to add a new Team Member?'
+            message: 'Would you like to add a team member?'
         }) 
         .then(({ newMember }) => {
             if(newMember === true) {

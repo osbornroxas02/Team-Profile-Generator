@@ -2,11 +2,15 @@
   --main-header-color: #add8e6;/*light blue = var(--main-header-color */
   --main-bg-color: #f5f5f5;/*whitesmoke var(--main-bg-color) */
   --main-txt-color: #ffffff;/*white = var(--main-txt-color) */
-  --main-padding: 10px;
 }
 
 * {
     box-sizing: border-box;
+  }
+
+  .main-color {
+    background-color: var(--main-header-color);
+    color: var(--main-txt-color);
   }
 
 body {
@@ -18,12 +22,12 @@ body {
   font-size: 16px;
 }
 
+/* Main Section */
 header {
   text-align: center;
   padding: 10px;
   background-color: var(--main-header-color);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
-
   display: block;
 }
 
@@ -32,17 +36,24 @@ header {
   margin-bottom: 0;
   color: var(--main-txt-color);
   border-bottom: 1px solid rgba(0,0,0,.125);
-}
-
-.card-body{
-  background-color: whitesmoke;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
 }
 
-.main-color {
-  background-color: var(--main-header-color);
-  color: var(--main-txt-color);
+.card-body{
+  background-color: whitesmoke;
 }
+
+/* Font Size */
+.page-title {
+  font-size: 30px;
+}
+
+.list-group {
+  font-size: 12px;
+}
+
